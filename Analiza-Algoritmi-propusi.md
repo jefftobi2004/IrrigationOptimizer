@@ -13,11 +13,11 @@ Optimizarea distribuției apei în sistemele de irigații necesită utilizarea u
 - Cazul mediu: **polinomial** \(O(n^3)\) *(cu metode de punct interior)*
 
 **Avantaje:**
-✔️ Rapid și eficient pentru probleme de mare dimensiune.
+✔️ Rapid și eficient pentru probleme de mare dimensiune.  
 ✔️ Soluții optime garantate pentru funcții liniare.
 
 **Dezavantaje:**
-❌ Nu poate trata obiective multiple simultan.
+❌ Nu poate trata obiective multiple simultan.  
 ❌ Sensibil la modificările constrângerilor.
 
 ---
@@ -34,11 +34,11 @@ Optimizarea distribuției apei în sistemele de irigații necesită utilizarea u
   - **Algoritmi evolutivi (ex. NSGA-II):** \(O(n^2 \cdot m)\), unde \(m\) este dimensiunea populației *(mai robuști, dar mai lenți)*
 
 **Avantaje:**
-✔️ Identifică compromisuri între mai multe obiective.
+✔️ Identifică compromisuri între mai multe obiective.  
 ✔️ Aplicabil pentru probleme complexe din lumea reală.
 
 **Dezavantaje:**
-❌ Cost computațional ridicat.
+❌ Cost computațional ridicat.  
 ❌ Necesită parametri suplimentari și ajustări pentru convergență.
 
 ---
@@ -55,7 +55,16 @@ Optimizarea distribuției apei în sistemele de irigații necesită utilizarea u
 
 ---
 
-## 📁 Referințe
-- [Optimizarea resurselor de apă în agricultură](https://example.com)
-- [MATLAB fgoalattain Documentation](https://www.mathworks.com/help/optim/ug/fgoalattain.html)
+## Referințe
 
+1. **Programarea Liniară (Simplex) - Wikipedia**  
+   [Programarea Liniară pe Wikipedia](https://ro.wikipedia.org/wiki/Programare_liniar%C4%83)  
+   - O resursă generală pentru înțelegerea teoriei programării liniare și a aplicațiilor Simplex.
+
+2. **NSGA-II Algorithm Explained - Towards Data Science**  
+   [NSGA-II Algorithm](https://towardsdatascience.com/nsga-ii-algorithm-theory-and-implementation-a5a90d60e17e)  
+   - Explicație detaliată despre NSGA-II, un algoritm evolutiv popular în optimizarea multi-obiectiv.
+
+3. **Multi-objective Optimization - GeeksforGeeks**  
+   [Multi-objective Optimization](https://www.geeksforgeeks.org/multi-objective-optimization-in-machine-learning/)  
+   - O introducere în optimizarea multi-obiectiv, cu exemple și aplicații.
