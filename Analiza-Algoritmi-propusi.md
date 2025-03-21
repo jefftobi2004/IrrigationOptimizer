@@ -13,12 +13,12 @@ Optimizarea distribuției apei în sistemele de irigații necesită utilizarea u
 - Cazul mediu: **polinomial** \(O(n^3)\) *(cu metode de punct interior)*
 
 **Avantaje:**
-✔️ Rapid și eficient pentru probleme de mare dimensiune.  
-✔️ Soluții optime garantate pentru funcții liniare.
+ Rapid și eficient pentru probleme de mare dimensiune.  
+ Soluții optime garantate pentru funcții liniare.
 
 **Dezavantaje:**
-❌ Nu poate trata obiective multiple simultan.  
-❌ Sensibil la modificările constrângerilor.
+ Nu poate trata obiective multiple simultan.  
+ Sensibil la modificările constrângerilor.
 
 ---
 
@@ -34,22 +34,22 @@ Optimizarea distribuției apei în sistemele de irigații necesită utilizarea u
   - **Algoritmi evolutivi (ex. NSGA-II):** \(O(n^2 \cdot m)\), unde \(m\) este dimensiunea populației *(mai robuști, dar mai lenți)*
 
 **Avantaje:**
-✔️ Identifică compromisuri între mai multe obiective.  
-✔️ Aplicabil pentru probleme complexe din lumea reală.
+ Identifică compromisuri între mai multe obiective.  
+ Aplicabil pentru probleme complexe din lumea reală.
 
 **Dezavantaje:**
-❌ Cost computațional ridicat.  
-❌ Necesită parametri suplimentari și ajustări pentru convergență.
+ Cost computațional ridicat.  
+ Necesită parametri suplimentari și ajustări pentru convergență.
 
 ---
 
-## 🔎 Concluzie
+##  Concluzie
 | Metodă | Complexitate | Avantaje | Dezavantaje |
 |--------|-------------|-----------|-------------|
 | **LP (Simplex)** | \(O(n^3)\) (în medie) | Rapid, optim garantat | Nu suportă mai multe obiective |
 | **MOO (Goal Attainment)** | \(O(n^2) - O(n^2 \cdot m)\) | Suport multi-obiectiv, robust | Computațional intensiv |
 
-📌 **Recomandare:**
+**Recomandare:**
 - Pentru alocare simplă, **LP** este mai eficient.
 - Pentru optimizări complexe, **MOO** oferă rezultate mai bune.
 
