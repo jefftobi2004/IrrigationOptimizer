@@ -1,33 +1,39 @@
 % Script MATLAB pentru optimizarea multi-obiectiva a apei in irigatii folosind NSGA-II
-% requires Global Optimization Toolbox.
+
 clc; clear; close all;
 
 % 1. Definirea parametrilor problemei
-numFields = 3;
+numFields = 3; % Numarul de campuri
 water_capacity = [1000; 800; 600]; % Cantitatea maxima de apa pentru fiecare camp
 water_cost = [2; 3; 1.5]; % Costul per litru 
 
-% 2. Definirea functiei obiectiv
-objectiveFunction = @(x) [sum(x), sum(x .* water_cost)]; % Minim consum & cost
+% 2. Definirea functiei obiectiv (minimizare consum & cost)
+objectiveFunction = @(x) [sum(x), sum(x .* water_cost)];
 
-% 3. Definirea restrictiilor
-lb = zeros(numFields,1); % Limita inferioara (fara alocare negativa)
-ub = water_capacity; % Limita superioara (maxim cat poate primi fiecare camp)
+% 3. restrictii
+lb = zeros(numFields,1);
+ub = water_capacity;
 
-% 4. Configurarea optiunilor pentru NSGA-II
-options = optimoptions('gamultiobj', 'PopulationSize', 50, 'MaxGenerations', 100, ...
-    'Display', 'iter', 'PlotFcn', @gaplotpareto);
+% 4. Configurarea optiunilor
+options = optimoptions('gamultiobj', 'PopulationSize', 100, 'MaxGenerations', 200, ...
+    'Display', 'iter', 'PlotFcn', []);
 
 % 5. Executia algoritmului NSGA-II
 [x_opt, fval] = gamultiobj(objectiveFunction, numFields, [], [], [], [], lb, ub, options);
 
-% 6. Afisarea rezultatelor
+
 figure;
-scatter(fval(:,1), fval(:,2), 50, 'filled');
+scatter3(fval(:,1), fval(:,2), sum(x_opt,2), 100, sum(x_opt,2), 'filled');
+colormap(jet);
+colorbar;
 xlabel('Consum Total de Apa (L)');
 ylabel('Cost Total al Apei');
-title('Frontiera Pareto - Optimizare Multi-Obiectiva');
+zlabel('Distributia Totala a Apei (L)');
+title('Optimizare Multi-Obiectiva - 3D');
 grid on;
+view(135, 30); 
+legend({'Solutii Optime'}, 'Location', 'best');
 
+% 7. Afisarea rezultatelor
 fprintf('Solutii Optime (Apa Distribuita in Fiecare Camp):\n');
 disp(x_opt);
