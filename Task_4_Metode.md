@@ -65,7 +65,7 @@ title('Frontiera Pareto pentru distribuția apei');
 grid on;
 ```
 
-##Alte metode
+## Alte metode
 
 ### Optimizare bazată pe algoritmul coloniei de furnici (ACO)
 - Modelarea distribuției apei ca un traseu optimizat prin feromonii artificiali ai furnicilor.
